@@ -16,10 +16,7 @@ type Url struct {
 	short_url string
 }
 
-type Database struct {
-}
-
-func db() **gorm.DB {
+func Connect_to_database() (**gorm.DB, error) {
 	dsn := fmt.Sprintf(
 		"host=%s user=%s password=%s dbname=%s port=%s sslmode=disable TimeZone=Pacific",
 		os.Getenv("DB_HOST"),
@@ -35,9 +32,17 @@ func db() **gorm.DB {
 		fmt.Printf("Error connecting to Database: %s", err)
 	}
 
-	if err == nil {
-		fmt.Println("Success")
-	}
+	return &db, err
+}
 
-	return &db
+func Insert_url() {
+
+}
+
+func Update_url() {
+
+}
+
+func Delete_url() {
+
 }
