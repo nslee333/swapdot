@@ -1,2 +1,3 @@
-## Swapdot
-A platform for everything related to URLs.
+## YAUT
+Yet another URL Tool :|
+
